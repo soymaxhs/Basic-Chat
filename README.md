@@ -17,7 +17,12 @@ npm run build
 npm install
 ```
 
-### Compiles and minifies for production
+### Run server
 ```
-npm run build
+nodemon app
 ```
+
+# Access
+
+## Finnally
+[localhost:3000](http://localhost:3000/)
