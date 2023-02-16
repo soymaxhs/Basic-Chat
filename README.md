@@ -24,5 +24,5 @@ nodemon app
 
 # Access
 
-## Finnally
+## Finnally go to
 [localhost:3000](http://localhost:3000/)
