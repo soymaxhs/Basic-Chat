@@ -15,7 +15,7 @@
             <button
               class="btn btn-outline-success"
               type="button"
-              v-on:click="() => sendMessage(newMessage)"
+              v-on:click="toSendMessage"
             >
               Send
             </button>
@@ -37,6 +37,12 @@ export default defineComponent({
     return {
       newMessage: "Hi",
     };
+  },
+  methods: {
+    toSendMessage() {
+      this.sendMessage?.(this.newMessage);
+      this.newMessage = "";
+    },
   },
 });
 </script>

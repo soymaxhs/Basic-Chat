@@ -37,7 +37,7 @@
           <button
             type="button"
             class="btn btn-primary"
-            v-on:click="() => setUser(userName)"
+            v-on:click="() => setUser?.(userName)"
           >
             Save changes
           </button>
