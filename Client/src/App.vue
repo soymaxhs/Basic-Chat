@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">BasicChat</a>
     <button
       class="navbar-toggler"
@@ -22,7 +22,7 @@
           <router-link class="nav-link" to="/rules">Rules</router-link>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
+      <form class="form-inline my-2 my-lg-0" @submit.prevent="() => {}">
         <input
           class="form-control mr-sm-2"
           type="search"
@@ -38,4 +38,12 @@
   <router-view />
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+.container {
+  margin-top: 60px;
+  margin-bottom: 100px;
+  .card {
+    width: 100%;
+  }
+}
+</style>
