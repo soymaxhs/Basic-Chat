@@ -1,10 +1,13 @@
+//Requires
 const express = require('express');
 const http = require('http');
 const { Server } = require("socket.io");
 const path = require("path");
 
+//Global values
 const PORT = 3000;
 
+//Settings
 const app = express();
 const myServer = http.createServer(app);
 const io = new Server(myServer);
@@ -42,7 +45,7 @@ myServer.listen(PORT, () => {
   console.log(`Server up at ${PORT} port.`);
 });
 
-//Socket.io
+//Socket.io actions
 io.on("connection", (socket) => {
   console.log("New user connected");
   socket.on("disconnect", () => {
@@ -52,3 +55,5 @@ io.on("connection", (socket) => {
     io.emit('chat',msg);
   });
 });
+
+//Working on API RESTful with MongoDB...
